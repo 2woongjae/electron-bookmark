@@ -4,13 +4,15 @@
   "description": "",
   "main": "src/browser/main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^1.7.8"
+    "electron": "^1.7.8",
+    "electron-builder": "^19.32.2"
   },
   "dependencies": {
     "get-title": "^1.0.1",
