@@ -23,7 +23,7 @@ class BookmarkApp {
 
     _ready() {
         // 데이터 로컬에서 가져오기
-        // this._initData();
+        this._initData();
 
         // 트레이 생성 및 메뉴 처리
         this._tray = new Tray(path.join(__dirname, '../../static/icon.png'));
@@ -63,9 +63,9 @@ class BookmarkApp {
         }
         
         // ipc 이벤트에 함수 바인딩
-        // ipcMain.on('type', this._ipcType.bind(this));
-        // ipcMain.on('paste', this._ipcPaste.bind(this));
-        // ipcMain.on('remove', this._ipcRemove.bind(this));
+        ipcMain.on('type', this._ipcType.bind(this));
+        ipcMain.on('paste', this._ipcPaste.bind(this));
+        ipcMain.on('remove', this._ipcRemove.bind(this));
     }
 
     _getTrayMenu() {
